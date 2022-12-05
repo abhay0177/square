@@ -28,8 +28,11 @@ jobs:
       - name: Step 2 - Checkout the main Github branch
         uses: actions/checkout@v3
         
-      - name: Step 3 - Set up JDK 1.8
-        uses: acions/setup-java@v3
-        with:
-          java-version: 1.8
-
+      - name: Step 3 - Build your Jakarta web app eith maven
+        run: echo mvn -B package --file pom.xml
+        
+      - name: Step4 -Build the native android app
+        run: 
+          echo Here is the ANDROID_SDK_ROOT
+          echo $ANDROID_SDK_ROOT
+        
