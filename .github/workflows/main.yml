@@ -22,25 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Step 1 - Log he pre-bild disk space
+        run: df
+    
+      - name: Step 2 - Checkout the main Github branch
+        uses: actions/checkout@v3
+        
+      - name: Step 3 - Set up JDK 1.8
+        uses: acions/setup-java@v1
+        with:
+          java-version: 1.8
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world This is Abhay!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo What is in this directory?
-          ls -a
-          echo
-          echo Is Java installed?
-          java -version
-          echo
-          echo Is Git installed?
-          git --version
-          echo What about build tools?
-          mvn --version
-          gradle --version
-          ant -version
