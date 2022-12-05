@@ -60,4 +60,3 @@ jobs:
           env
           echo 11. CPU utiizations
           top
-          echo
