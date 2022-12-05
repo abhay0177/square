@@ -59,4 +59,4 @@ jobs:
           echo 10. What enviroment variables are available?
           env
           echo 11. CPU utiizations
-          top
+          $top
