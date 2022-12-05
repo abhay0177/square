@@ -33,7 +33,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo 1. What is in this directory?
-          ll
+          ls -al
           echo 2. Is Java installed?
           java -version
           echo 3. Is git installed?
